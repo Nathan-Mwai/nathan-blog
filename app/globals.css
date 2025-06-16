@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme{
+  --color-green-DEFAULT:#B1DD52;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
