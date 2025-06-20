@@ -10,7 +10,7 @@ const geistSans = Geist({
 });
 
 const playfairDisplay = Playfair_Display({
-    variable: "--font-playfair",
+    variable: "--font-playfair-display",
     subsets: ['latin']
 })
 
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfairDisplay.variable} antialiased`}
+        className={` ${playfairDisplay.variable} font-playfair antialiased`}
       >
       <SidebarProvider>
           <AppSidebar />
