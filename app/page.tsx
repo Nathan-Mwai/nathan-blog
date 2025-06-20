@@ -1,14 +1,9 @@
-import { AppSidebar } from "@/components/app-sidebar"
-
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/components/ui/sidebar"
+import Header from "@/components/Header";
 
 export default function Page() {
   return (
       <>
+          <Header/>
         <div className="grid auto-rows-min gap-4 md:grid-cols-3">
           <div className="bg-muted/50 aspect-video rounded-xl" />
           <div className="bg-muted/50 aspect-video rounded-xl" />
