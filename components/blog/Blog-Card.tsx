@@ -5,7 +5,7 @@ import {ArrowRight, ArrowUpRight} from "lucide-react";
 const BlogCard = ({id, title, img,time,category}:BlogProps) => {
     return (
         <>
-            <div>
+            <div key={id}>
                 <div>
                     <div>
                         <img src={img} alt="" />
@@ -17,6 +17,9 @@ const BlogCard = ({id, title, img,time,category}:BlogProps) => {
                             <ArrowRight className={'size-4 stroke-2'}/>
                             {/*<ArrowUpRight/>*/}
                             </div>
+                        </div>
+                        <div>
+                            <p>{category} <span> . </span>{time}min</p>
                         </div>
                     </div>
                 </div>
