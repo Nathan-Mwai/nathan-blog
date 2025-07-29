@@ -1,21 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono,Playfair_Display } from "next/font/google";
+import { Geist, Playwrite_US_Trad, Raleway } from "next/font/google";
 import "./globals.css";
-import {SidebarInset, SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
-import {AppSidebar} from "@/components/app-sidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const playfairDisplay = Playfair_Display({
-    variable: "--font-playfair-display",
-    subsets: ['latin']
-})
+const playwriteMono = Playwrite_US_Trad({
+  variable: "--font-playwrite-us-trad-mono",
+  // subsets: ["latin"],
+});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const raleway = Raleway({
+  variable: "--font-raleway-mono",
   subsets: ["latin"],
 });
 
@@ -32,21 +30,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${playfairDisplay.variable} font-playfair antialiased`}
+        className={`${raleway.variable} ${playwriteMono.variable}
+        antialiased`}
       >
-      <SidebarProvider>
-          <AppSidebar />
-          <SidebarInset>
-              <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
-                  <div className="flex items-center gap-2 px-4">
-                      <SidebarTrigger className="-ml-1" />
-                  </div>
-              </header>
-              <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
         {children}
-              </div>
-          </SidebarInset>
-      </SidebarProvider>
       </body>
     </html>
   );
