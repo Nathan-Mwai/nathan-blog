@@ -3,6 +3,9 @@ import {EyeIcon} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
+import {Blog} from "@/sanity/types";
+
+export type BlogTypeCard = Blog
 
 const BlogCard = ({post}:{post:BlogTypeCard}) => {
     const {_createdAt, views, category,title,_id, image,description } = post;
@@ -34,7 +37,7 @@ const BlogCard = ({post}:{post:BlogTypeCard}) => {
                 <Image src={image} alt={"blogImage"} width={400} height={400} className={'blog-card_img'}/>
             </Link>
             <div className={'flex-between gap-3 mt-5'}>
-                <Link href={`/?query=${category.toLowerCase()}`}>
+                <Link href={`/?query=${category?.toLowerCase()}`}>
                     <p className={'text-16-medium'}>{category}</p>
                 </Link>
                 <Button className={"blog-card_btn"} asChild>
