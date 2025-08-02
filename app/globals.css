@@ -6,6 +6,7 @@
 @theme inline {
   --font-playwrite-us-trad-mono: var(--font-playwrite-us-trad-mono);
   --font-raleway-mono: var(--font-raleway-mono);
+  /*--font-work-sans: var(--font-work-sans);*/
   --color-brand-200: #9100EB;
   --color-blog-back: #DADADA;
   --breakpoint-xs: 475px;
@@ -16,7 +17,6 @@
   --color-black-200: #141413;
   --color-black-300: #7d8087;
   --color-white: #fff;
-  --font-work-sans: var(--font-work-sans);
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
@@ -140,6 +140,10 @@ html, body {
 
   .text-brand{
     @apply font-playwrite-us-trad-mono text-brand-200
+  }
+  .tag {
+    @apply bg-secondary px-6 py-3 font-raleway-mono font-bold rounded-sm uppercase relative
+      /* tag-tri */;
   }
 }
 
