@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+/*@import ""*/
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -144,6 +146,12 @@ html, body {
   .tag {
     @apply bg-secondary px-6 py-3 font-raleway-mono font-bold rounded-sm uppercase relative
       /* tag-tri */;
+  }
+  .category-tag {
+    @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-full;
+  }
+  .no-result {
+    @apply text-black-100 text-sm font-normal;
   }
 }
 
